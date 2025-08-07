@@ -88,6 +88,84 @@ public class MainApp {
             }
         }
 
+        // tür dönüşümü
+        String stAge = "30";
+        int cAge = Integer.parseInt(stAge);
+        System.out.println("cAge : " + (cAge + 5));
+
+        String doValue = "33.7";
+        double cValue = Double.parseDouble(doValue);
+        System.out.println("cValue : " + cValue);
+
+        // Array
+        String[] users = {"Kemal", "Suna", "Zehra", "Ali", "Mehmet", "Ayşe"};
+        // index - 0 dan başlar
+        int index = 5;
+        // arr size
+        int size = users.length;
+        System.out.println("size : " + size);
+        System.out.println( users[0] );
+        if (size > index) {
+            System.out.println( users[index] );
+        }else  {
+            System.out.println( "index sınırların dışında: " + index );
+        }
+        System.out.println(users);
+
+        // loop
+        // for
+        for(int i = 0; i<10; i++) {
+            System.out.println("i : " + i);
+        }
+        System.out.println("=========================");
+
+        for (int i = 2; i < users.length; i++) {
+            System.out.println("user : " + users[i]);
+        }
+
+        System.out.println("=========================");
+        for(String item: users) {
+            System.out.println("item : " + item);
+        }
+
+        // while
+        System.out.println("=========================");
+        int z = 0;
+        while (z < users.length) {
+            System.out.println("item : " + users[z]);
+            z++;
+        }
+
+        // do - while
+        System.out.println("=========================");
+        int r = 0;
+        do {
+            System.out.println("Do While Call");
+            r++;
+        }while (r < 5);
+
+        // nesne üretimi
+        Util obj = new Util();
+        System.out.println( obj.count );
+
+        obj.noParams();
+        obj.nameSurnameJoin("Erkan", "Bilmem");
+        obj.nameSurnameJoin("Selin", "Bil");
+        int charSize = obj.dataCharSize("Java Lang");
+        System.out.println("charSize : " + charSize);
+        if (charSize > 10) {
+            System.out.println("10 karakterden büyük");
+        }else {
+            System.out.println("10 karakterden küçük");
+        }
+
+        System.out.println("=========================");
+        String[] cities = {"İstanbul", "İzmir", "Ankara", "Aydın", "Bursa"};
+        cities = obj.dataArr(cities);
+        for(String item: cities) {
+            System.out.println(item);
+        }
+
 
     }
 
