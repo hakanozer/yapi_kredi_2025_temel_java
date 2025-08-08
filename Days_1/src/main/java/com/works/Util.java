@@ -20,9 +20,26 @@ public class Util {
 
     public String[] dataArr(String[] arr) {
         for(int i = 0; i < arr.length; i++) {
-            arr[i] = " - " + arr[i];
+            arr[i] = addChar(arr[i]);
         }
         return arr;
     }
+
+    private String addChar(String item) {
+        item = " - " + item;
+        return item;
+    }
+
+    public int sum(int a, int b) {
+        return a + b;
+    }
+
+    public int dataStringSum(String stNum1, String stNum2) {
+        int n1 = Integer.parseInt(stNum1);
+        int n2 = Integer.parseInt(stNum2);
+        return n1+n2;
+    }
+
+
 
 }

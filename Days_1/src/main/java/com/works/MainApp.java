@@ -166,6 +166,15 @@ public class MainApp {
             System.out.println(item);
         }
 
+        int sm = obj.sum(4564, 879);
+        System.out.println("Sum : " + sm);
+
+        int sm1 = obj.sum(656, 132);
+        System.out.println("Sum1 : " + sm1);
+
+        int stNum = obj.dataStringSum("100", "34534");
+        System.out.println("stNum : " + stNum);
+
 
     }
 
