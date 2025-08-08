@@ -5,6 +5,7 @@ public class Util {
     int count = 100;
 
     public void noParams() {
+        System.out.println( Action.name );
         System.out.println("noParams call");
     }
 

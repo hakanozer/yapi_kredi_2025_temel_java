@@ -1,5 +1,7 @@
 package com.works;
 
+import com.works.models.Human;
+
 public class MainApp {
 
     public static void main(String[] args) {
@@ -115,6 +117,7 @@ public class MainApp {
         // loop
         // for
         for(int i = 0; i<10; i++) {
+            int xx = 0;
             System.out.println("i : " + i);
         }
         System.out.println("=========================");
@@ -175,6 +178,43 @@ public class MainApp {
         int stNum = obj.dataStringSum("100", "34534");
         System.out.println("stNum : " + stNum);
 
+        System.out.println(Action.name);
+        Action.name = "Serkan Bil";
+        Action action = new Action();
+        action.city = "İzmir";
+        System.out.println( action.city );
+        System.out.println( action.address );
+
+        // Try - Catch
+        int end = action.convert("101 ");
+        System.out.println("end : " + end);
+        // session
+
+        User user = new User();
+        Profile profile = new User();
+        Security security = new Security();
+
+        // Abstract class
+        Person person = new Person(2);
+        System.out.println( person.userName() );
+        System.out.println( person.total() );
+
+        //Properties
+        Human h1 = new Human("Ahmet", "Yılmaz", "ahmet.yilmaz@mail.com", "pass123", 25);
+        Human h2 = new Human("Ayşe", "Demir", "ayse.demir@mail.com", "pass123", 28);
+        Human h3 = new Human("Mehmet", "Kaya", "mehmet.kaya@mail.com", "pass123", 32);
+        Human h4 = new Human("Fatma", "Öztürk", "fatma.ozturk@mail.com", "pass123", 22);
+        Human h5 = new Human("Emre", "Çelik", "emre.celik@mail.com", "pass123", 35);
+        Human h6 = new Human("Zeynep", "Aydın", "zeynep.aydin@mail.com", "pass123", 29);
+        Human h7 = new Human("Can", "Şahin", "can.sahin@mail.com", "pass123", 27);
+        Human h8 = new Human("Elif", "Yıldırım", "elif.yildirim@mail.com", "pass123", 31);
+        Human h9 = new Human("Burak", "Kurt", "burak.kurt@mail.com", "pass123", 26);
+        Human h10 = new Human("Pınar", "Aslan", "pinar.aslan@mail.com", "pass123", 24);
+
+        Human[] people = {h1, h2, h3, h4, h5, h6, h7, h8, h9, h10};
+        for( Human item: people ) {
+            System.out.println(item.getEmail());
+        }
 
     }
 
