@@ -1,6 +1,7 @@
 package com.works;
 
 import com.works.models.Human;
+import com.works.useThread.Job;
 
 public class MainApp {
 
@@ -215,6 +216,17 @@ public class MainApp {
         for( Human item: people ) {
             System.out.println(item.getEmail());
         }
+
+
+        UseArrayList useArrayList = new UseArrayList();
+        useArrayList.call();
+
+        String[] images = {"1.jpg", "2.jpg", "3.jpg", "4.jpg"};
+        for(String item: images) {
+            Job job = new Job(item);
+            job.start();
+        }
+        System.out.println("This line call");
 
     }
 
